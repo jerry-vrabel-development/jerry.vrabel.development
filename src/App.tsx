@@ -1,4 +1,4 @@
-import bashLogo from './250-bash.svg'
+import bashLogo from '/250-bash.svg'
 import './App.css'
 
 function App() {
