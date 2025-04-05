@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) navigator.serviceWorker.register('/jerry.vrabel.development/dev-sw.js?dev-sw', { scope: '/jerry.vrabel.development/', type: 'classic' })
