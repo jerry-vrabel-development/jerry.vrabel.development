@@ -1,4 +1,3 @@
-import bashLogo from '/250-bash.svg'
 import Logo from './components/Logo'
 import './App.css'
 
