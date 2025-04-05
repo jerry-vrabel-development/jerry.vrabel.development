@@ -2,7 +2,7 @@ import Logo from './components/Logo'
 import './App.css'
 
 function App() {
-  const bashLogoUrl = './public/250-bash.svg'
+  const bashLogoUrl = './250-bash.svg'
   return (
     <>
       <div>
