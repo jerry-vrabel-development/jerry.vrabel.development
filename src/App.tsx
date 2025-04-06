@@ -12,6 +12,7 @@ import './App.css';
 const App: React.FC = () => {
 
   return (
+    <div>
     <Router>
       <Navbar />
       <AnimatePresence mode="wait">
@@ -40,6 +41,7 @@ const App: React.FC = () => {
         </Routes>
       </AnimatePresence>
     </Router>
+    </div>
   );
 };
 
