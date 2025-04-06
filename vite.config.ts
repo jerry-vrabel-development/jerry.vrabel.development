@@ -13,5 +13,5 @@ export default defineConfig({
       }
      })
   ],
-  base: '/jerry.vrabel.development/'
+ // base: '/jerry.vrabel.development/'
 })
