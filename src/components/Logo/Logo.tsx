@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Logo.css"
 
-const bashLogoUrl = './250-bash.svg'
+const bashLogoUrl = '/jerry.vrabel.development/250-bash.svg'
 
 const Logo: React.FC = () => {
   const [isFadingIn, setIsFadingIn] = useState(true);

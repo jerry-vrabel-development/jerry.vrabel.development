@@ -1,37 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Navbar.css"
-
-interface LinkItem {
-    label: string;
-    href: string;
-}
-
-const links: LinkItem[] = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Contact', href: '/contact' },
-];
-
-
-const CustomLink = ({ label, href }: { label: string; href: string }) => (
-    <a href={href} className="custom-link">
-        {label}
-    </a>
-);
 
 const Navbar: React.FC = () => {
     return (
-        <nav className="navbar">
-            <ul>
-                {links.map((link, index) => (
-                    <li key={index}>
-                        <CustomLink label={link.label} href={link.href} />
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <div>
+            <nav className="navbar">
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/services">Services</Link></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                </ul>
+            </nav>
+        </div>
     );
 };
 
