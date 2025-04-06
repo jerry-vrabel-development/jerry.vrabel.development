@@ -1,14 +1,16 @@
-import Logo from './components/Logo'
+import Logo from './components/Logo/Logo'
+import Navbar from './components/Navbar/Navbar'
 import './App.css'
 
 function App() {
-  const bashLogoUrl = './250-bash.svg'
+
   return (
     <>
+      <Navbar />
       <div>
         <h1>Jerry Vrabel Development</h1>
         <p>Web Application Development</p>
-        <Logo src={bashLogoUrl} />
+        <Logo />
       </div>
     </>
   )
