@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-    <Router>
+    <Router basename="/jerry.vrabel.development/">
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes>
