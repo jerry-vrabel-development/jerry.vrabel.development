@@ -38,9 +38,9 @@ const App: React.FC = () => {
               <Contact />
             </motion.div>
           } />
-        </Routes>
+          </Routes>
       </AnimatePresence>
-    </Router>
+      </Router>
     </div>
   );
 };
