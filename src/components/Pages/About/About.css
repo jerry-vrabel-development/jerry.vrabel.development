@@ -1,6 +1,7 @@
 .about {
   height: 100vh;
   width: 100vw;
+  padding-top: 50px;
   color: #020c1b;
   background-color: #ffa500aa; // Added a background color for better visibility
   display: flex;
