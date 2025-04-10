@@ -1,3 +1,4 @@
+/* Navbar Base Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -5,26 +6,125 @@
   background-color: #020c1b;
   color: #fff;
   padding: 1rem;
-  position: fixed; /* Change from relative to fixed */
-  top: 0; /* Stick to the top */
-  left: 0; /* Stretch from the left edge */
-  right: 0; /* Stretch to the right edge */
-  width: 100%; /* Ensure full width */
-  z-index: 1000; /* Ensure navbar stays on top of other content */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo Styles */
 .logo {
   font-weight: bold;
   font-size: 1.25rem;
 }
 
+/* Menu Container */
 .menu-container {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* Navbar List */
+.navbar-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+/* List Items for both navbar and mobile menu */
+.navbar-ul li,
+.mobile-navbar-ul li {
+  position: relative;
+}
+
+/* Regular Nav Links */
+.navbar-ul li a {
+  color: #ffa500aa;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link:hover .link-underline {
+  /* Remove any explicit width settings here that might conflict with framer-motion */
+  background-color: inherit; /* Inherit from the nth-child rules */
+}
+
+.navbar-ul li a:hover {
+  color: #64ffda;
+}
+
+/* Generic Nav Link Structure */
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Icon and Text Spacing */
+.nav-link span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  pointer-events: none;
+}
+
+/* Animated Underline Element */
+.link-underline {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 1px;
+  width: 0; /* Start with width 0 */
+  background-color: #3b82f6;
+  border-radius: 1px;
+  transition: width 0.3s ease-in-out; /* Add transition here */
+}
+
+/* On hover, expand the width */
+.nav-link:hover .link-underline {
+  width: 100%;
+}
+
+/* Different colors for different nav items */
+.navbar-ul li:nth-child(1) .link-underline,
+.mobile-navbar-ul li:nth-child(1) .link-underline {
+  background-color: #ef4444; /* Red */
+}
+
+.navbar-ul li:nth-child(2) .link-underline,
+.mobile-navbar-ul li:nth-child(2) .link-underline {
+  background-color: #3b82f6; /* Blue */
+}
+
+.navbar-ul li:nth-child(3) .link-underline,
+.mobile-navbar-ul li:nth-child(3) .link-underline {
+  background-color: #10b981; /* Green */
+}
+
+.navbar-ul li:nth-child(4) .link-underline,
+.mobile-navbar-ul li:nth-child(4) .link-underline {
+  background-color: #f59e0b; /* Amber */
+}
+
+.navbar-ul li:nth-child(5) .link-underline,
+.mobile-navbar-ul li:nth-child(5) .link-underline {
+  background-color: #8b5cf6; /* Purple */
+}
+
+/* Mobile Menu Button */
 .menu-button {
   background: none;
   border: none;
@@ -42,26 +142,7 @@
   transition: 0.3s;
 }
 
-.navbar-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-}
-
-.navbar-ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: block;
-  transition: color 0.3s;
-}
-
-.navbar-ul li a:hover {
-  color: #64ffda;
-}
-
+/* Mobile Menu Container */
 .mobile-menu-container {
   display: none;
 }
@@ -77,12 +158,14 @@
   z-index: 5;
 }
 
+/* Mobile Navbar List */
 .mobile-navbar-ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
+/* Mobile List Items */
 .mobile-navbar-ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -91,23 +174,34 @@
   border-bottom: none;
 }
 
+/* Mobile Nav Links */
 .mobile-navbar-ul li a {
   color: #fff;
   text-decoration: none;
   padding: 1rem;
-  display: block;
-  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .mobile-navbar-ul li a:hover {
   background-color: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
 }
 
+/* Mobile specific underline position */
+.mobile-nav-item .link-underline {
+  bottom: -2px;
+}
+
+/* Media Query for Mobile */
 @media (max-width: 768px) {
   .menu-button {
     display: block;
   }
-
+  
   .menu-container {
     display: none;
   }
