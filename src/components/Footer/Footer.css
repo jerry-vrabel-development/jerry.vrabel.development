@@ -1,0 +1,165 @@
+/* Footer.css */
+
+/* Main footer container */
+.footer {
+  width: 100%;
+  background-color: #1f2937;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Section styling */
+.footer-section {
+  margin-bottom: 1rem;
+}
+
+.footer-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #ffffff;
+}
+
+.footer-text {
+  color: #d1d5db;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer links section */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+/* Contact information section */
+.footer-contact {
+  line-height: 1.6;
+  color: #d1d5db;
+  font-style: normal;
+}
+
+.footer-contact p {
+  margin: 0.25rem 0;
+}
+
+/* Newsletter form */
+.newsletter-form {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.newsletter-input {
+  flex-grow: 1;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.25rem 0 0 0.25rem;
+  outline: none;
+  color: #111827;
+}
+
+.newsletter-button {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #2563eb;
+}
+
+.newsletter-button:active {
+  transform: scale(0.95);
+}
+
+/* Footer bottom section with copyright and social links */
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #374151;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Social media links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .social-links {
+    margin-top: 0;
+  }
+}
+
+.social-link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  color: #ffffff;
+}
+
+/* Page layout utilities to ensure footer is at bottom */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
