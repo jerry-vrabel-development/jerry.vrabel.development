@@ -5,6 +5,7 @@ import Portfolio from './components/Pages/Portfolio/Portfolio';
 import Contact from './components/Pages/Contact/Contact';
 import Home from './components/Pages/Home/Home';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 const App: React.FC = () => {
@@ -15,7 +16,8 @@ const App: React.FC = () => {
             <About />
             <Services />
             <Portfolio />
-            <Contact />
+      <Contact />
+      <Footer companyName="Jerry Vrabel Development" />
   </div>
   );
 };
