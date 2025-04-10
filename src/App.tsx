@@ -11,21 +11,11 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Navbar />
-          <a href="#home"> {/* Link to Home component */}
             <Home />
-          </a>
-          <a href="#about"> {/* Link to About component */}
             <About />
-          </a>
-          <a href="#services"> {/* Link to Services component */}
             <Services />
-          </a>
-          <a href="#portfolio"> {/* Link to Portfolio component */}
             <Portfolio />
-          </a>
-          <a href="#contact"> {/* Link to Contact component */}
             <Contact />
-          </a>
   </div>
   );
 };
