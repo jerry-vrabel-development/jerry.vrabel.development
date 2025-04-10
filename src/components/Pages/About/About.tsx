@@ -6,8 +6,7 @@ const About: React.FC = () => {
   return (
   <div className='about' id="about">
       <div>
-      <FcAbout />
-    <h1>About Page</h1>
+    <h1>About Page <FcAbout /></h1>
     <p>Welcome to my personal website! I'm Jerry Vrabel, a passionate developer with a drive to create innovative solutions. This
 space serves as a hub for me to share my experiences, projects, and ideas.</p>
 
