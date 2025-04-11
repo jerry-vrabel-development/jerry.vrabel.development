@@ -55,15 +55,6 @@
   transition: color 0.3s;
 }
 
-.nav-link:hover .link-underline {
-  /* Remove any explicit width settings here that might conflict with framer-motion */
-  background-color: inherit; /* Inherit from the nth-child rules */
-}
-
-.navbar-ul li a:hover {
-  color: #64ffda;
-}
-
 /* Generic Nav Link Structure */
 .nav-link {
   position: relative;
@@ -81,16 +72,15 @@
   pointer-events: none;
 }
 
-/* Animated Underline Element */
+/* Base underline styles */
 .link-underline {
   position: absolute;
   bottom: -3px;
   left: 0;
   height: 1px;
-  width: 0; /* Start with width 0 */
-  background-color: #3b82f6;
+  width: 0;
   border-radius: 1px;
-  transition: width 0.3s ease-in-out; /* Add transition here */
+  transition: width 0.3s ease-in-out;
 }
 
 /* On hover, expand the width */
@@ -98,30 +88,55 @@
   width: 100%;
 }
 
-/* Different colors for different nav items */
+/* Colors for each nav item - both text and underline */
+/* Item 1 */
+.navbar-ul li:nth-child(1) a:hover,
+.mobile-navbar-ul li:nth-child(1) a:hover {
+  color: #ef4444;
+}
 .navbar-ul li:nth-child(1) .link-underline,
 .mobile-navbar-ul li:nth-child(1) .link-underline {
-  background-color: #ef4444; /* Red */
+  background-color: #ef4444;
 }
 
+/* Item 2 */
+.navbar-ul li:nth-child(2) a:hover,
+.mobile-navbar-ul li:nth-child(2) a:hover {
+  color: #3b82f6;
+}
 .navbar-ul li:nth-child(2) .link-underline,
 .mobile-navbar-ul li:nth-child(2) .link-underline {
-  background-color: #3b82f6; /* Blue */
+  background-color: #3b82f6;
 }
 
+/* Item 3 */
+.navbar-ul li:nth-child(3) a:hover,
+.mobile-navbar-ul li:nth-child(3) a:hover {
+  color: #10b981;
+}
 .navbar-ul li:nth-child(3) .link-underline,
 .mobile-navbar-ul li:nth-child(3) .link-underline {
-  background-color: #10b981; /* Green */
+  background-color: #10b981;
 }
 
+/* Item 4 */
+.navbar-ul li:nth-child(4) a:hover,
+.mobile-navbar-ul li:nth-child(4) a:hover {
+  color: #f59e0b;
+}
 .navbar-ul li:nth-child(4) .link-underline,
 .mobile-navbar-ul li:nth-child(4) .link-underline {
-  background-color: #f59e0b; /* Amber */
+  background-color: #f59e0b;
 }
 
+/* Item 5 */
+.navbar-ul li:nth-child(5) a:hover,
+.mobile-navbar-ul li:nth-child(5) a:hover {
+  color: #8b5cf6;
+}
 .navbar-ul li:nth-child(5) .link-underline,
 .mobile-navbar-ul li:nth-child(5) .link-underline {
-  background-color: #8b5cf6; /* Purple */
+  background-color: #8b5cf6;
 }
 
 /* Mobile Menu Button */
@@ -176,7 +191,7 @@
 
 /* Mobile Nav Links */
 .mobile-navbar-ul li a {
-  color: #fff;
+  color: #ffa500aa;
   text-decoration: none;
   padding: 1rem;
   display: flex;
@@ -187,8 +202,7 @@
 }
 
 .mobile-navbar-ul li a:hover {
-  background-color: rgba(100, 255, 218, 0.1);
-  color: #64ffda;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Mobile specific underline position */
@@ -201,7 +215,7 @@
   .menu-button {
     display: block;
   }
-  
+ 
   .menu-container {
     display: none;
   }

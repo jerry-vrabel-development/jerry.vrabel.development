@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FcAbout } from "react-icons/fc";
 import { MdMiscellaneousServices } from "react-icons/md";
 import { IoIosCodeWorking } from "react-icons/io";
@@ -10,22 +9,9 @@ import './Navbar.css';
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
-  // Animation for the underline effect
-  const underlineVariants = {
-    hidden: { width: 0 },
-    visible: { 
-      width: '100%',
-      transition: { 
-        duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
-  };
-  
   return (
     <div className="App">
       <nav className={`navbar ${mobileMenuOpen ? 'active' : ''}`}>
-       
         <div className="menu-container">
           <ul className="navbar-ul">
             <li className="nav-item">
@@ -60,7 +46,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-       
+      
         <button
           className="menu-button"
           aria-label="Toggle menu"
@@ -77,56 +63,31 @@ const Navbar = () => {
             <li className="mobile-nav-item">
               <a href="#home" className="nav-link">
                 <span>Home</span>
-                <motion.div 
-                  className="link-underline"
-                  initial="hidden"
-                  whileHover="visible"
-                  variants={underlineVariants}
-                />
+                <div className="link-underline"></div>
               </a>
             </li>
             <li className="mobile-nav-item">
               <a href="#about" className="nav-link">
                 <span>About</span>
-                <motion.div 
-                  className="link-underline"
-                  initial="hidden"
-                  whileHover="visible"
-                  variants={underlineVariants}
-                />
+                <div className="link-underline"></div>
               </a>
             </li>
             <li className="mobile-nav-item">
               <a href="#services" className="nav-link">
                 <span>Services</span>
-                <motion.div 
-                  className="link-underline"
-                  initial="hidden"
-                  whileHover="visible"
-                  variants={underlineVariants}
-                />
+                <div className="link-underline"></div>
               </a>
             </li>
             <li className="mobile-nav-item">
               <a href="#portfolio" className="nav-link">
                 <span>Portfolio</span>
-                <motion.div 
-                  className="link-underline"
-                  initial="hidden"
-                  whileHover="visible"
-                  variants={underlineVariants}
-                />
+                <div className="link-underline"></div>
               </a>
             </li>
             <li className="mobile-nav-item">
               <a href="#contact" className="nav-link">
                 <span>Contact</span>
-                <motion.div 
-                  className="link-underline"
-                  initial="hidden"
-                  whileHover="visible"
-                  variants={underlineVariants}
-                />
+                <div className="link-underline"></div>
               </a>
             </li>
           </ul>
