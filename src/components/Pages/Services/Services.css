@@ -1,10 +1,306 @@
-.services {
-  height: 100vh;
-  width: 100vw;
-  padding-top: 50px;
-  background-color: #020c1b; // Added a background color for better visibility
+/* Base Services Container */
+.services-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #020c1b;
   display: flex;
-  flexDirection: column;
-  alignItems: center;
-  justifyContent: center;
+  justify-content: center;
+}
+
+.services-wrapper {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styles */
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #8892b0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Cards Container */
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Service Card - Default for large and extra large screens (4 cards) */
+.service-card {
+  background-color: #112240;
+  border-radius: 10px;
+  padding: 1.75rem;
+  width: calc((100% - 4.5rem) / 6); /* Four cards with 3 gaps between them (1.5rem * 3 = 4.5rem) */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #ccd6f6;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-card.selected {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Color Accents */
+.service-card.blue {
+  border-top: 5px solid #3b82f6;
+}
+
+.service-card.green {
+  border-top: 5px solid #10b981;
+}
+
+.service-card.purple {
+  border-top: 5px solid #8b5cf6;
+}
+
+.service-card.gold {
+  border-top: 5px solid #f59e0b;
+}
+
+/* Popular Badge */
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: #10b981;
+  color: #020c1b;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Card Header */
+.service-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card.blue .service-icon {
+  color: #3b82f6;
+}
+
+.service-card.green .service-icon {
+  color: #10b981;
+}
+
+.service-card.purple .service-icon {
+  color: #8b5cf6;
+}
+
+.service-card.gold .service-icon {
+  color: #f59e0b;
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #e6f1ff;
+}
+
+/* Price Display */
+.service-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #e6f1ff;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+
+.period {
+  font-size: 1rem;
+  color: #8892b0;
+  font-weight: normal;
+}
+
+/* Features List */
+.service-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.service-features li {
+  padding: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #233554;
+}
+
+.service-features li:last-child {
+  border-bottom: none;
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+}
+
+.feature-icon.included {
+  color: #64ffda;
+}
+
+.feature-icon.excluded {
+  color: #ef4444;
+}
+
+li.excluded {
+  color: #8892b0;
+  text-decoration: line-through;
+}
+
+/* Action Button */
+.service-button {
+  background-color: transparent;
+  color: #e6f1ff;
+  border: 2px solid #64ffda;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.service-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.service-card.selected .service-button {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.service-card.blue .service-button:hover,
+.service-card.blue.selected .service-button {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+}
+
+.service-card.green .service-button:hover,
+.service-card.green.selected .service-button {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+}
+
+.service-card.purple .service-button:hover,
+.service-card.purple.selected .service-button {
+  background-color: rgba(139, 92, 246, 0.1);
+  border-color: #8b5cf6;
+}
+
+.service-card.gold .service-button:hover,
+.service-card.gold.selected .service-button {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: #f59e0b;
+}
+
+/* ----------------- RESPONSIVE BREAKPOINTS ----------------- */
+
+/* Large and Extra Large screens (4 cards per row) - default state above */
+
+/* Medium screens (2 cards per row) */
+@media (max-width: 1200px) {
+  .service-card {
+    width: calc((100% - 1.5rem) / 2); /* Two cards with 1 gap between them */
+  }
+  
+  .services-header h1 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Small screens (1 card per row) */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .services-cards {
+    gap: 2rem;
+  }
+  
+  .services-wrapper {
+    padding: 2.5rem 1rem;
+  }
+}
+
+/* Extra small screens adjustments */
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1.25rem;
+  }
+  
+  .services-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .services-header p {
+    font-size: 1rem;
+  }
+  
+  .service-icon {
+    font-size: 2rem;
+  }
+  
+  .service-price {
+    font-size: 2.25rem;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 360px) {
+  .services-wrapper {
+    padding: 2rem 0.75rem;
+  }
+  
+  .service-features li {
+    font-size: 0.9rem;
+  }
 }
