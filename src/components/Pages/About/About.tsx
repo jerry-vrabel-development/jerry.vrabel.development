@@ -1,6 +1,6 @@
 import React from 'react';
 import { FcAbout } from "react-icons/fc";
-import { FaCode, FaUserAlt, FaQuestionCircle, FaLaptopCode } from "react-icons/fa";
+import { FaUserAlt, FaQuestionCircle, FaLaptopCode } from "react-icons/fa";
 import './About.css';
 
 const About: React.FC = () => {
