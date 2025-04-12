@@ -1,7 +1,6 @@
 import React from 'react';
 import { IoIosCodeWorking } from "react-icons/io";
-import { FaServer, FaDatabase, FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiPython, SiJava, SiDocker } from "react-icons/si";
+import { FaServer, FaDatabase, FaReact, FaAws } from "react-icons/fa";
 import './Portfolio.css';
 
 const Portfolio: React.FC = () => {
