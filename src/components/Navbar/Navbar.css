@@ -44,7 +44,7 @@
 
 /* Regular Nav Links */
 .navbar-ul li a {
-  color: #ffa500aa;
+  color: rgb(248, 77, 15);
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: flex;

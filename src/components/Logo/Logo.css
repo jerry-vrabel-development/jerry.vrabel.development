@@ -20,5 +20,5 @@
 }
 
 .color-change {
-  filter: drop-shadow(0 0 2em #ffa500aa); /* Apply drop shadow with specified color */
+  filter: drop-shadow(0 0 2em #f84d0f); /* Apply drop shadow with specified color */
 }
