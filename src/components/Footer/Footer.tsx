@@ -54,10 +54,10 @@ const Footer: React.FC<FooterProps> = ({ companyName = "Jerry Vrabel Development
             © {currentYear} {companyName}. All rights reserved.
           </p>
           <div className="social-links">
-            {["Discord", "Slack", "Twitch", "LinkedIn"].map((social) => (
+            {["Revolt"].map((social) => (
               <motion.a
                 key={social}
-                href="#"
+                href="https://rvlt.gg/1FYB0sxD"
                 className="social-link"
                 whileHover={hoverScale}
                 whileTap={{ scale: 0.95 }}
