@@ -1,220 +1,78 @@
 .about {
-  min-height: 100vh;
-  width: 100%;
   padding-top: 50px;
-  color: #020c1b;
-  background-color:rgb(248, 77, 15);
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-container {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1200px;
+
 }
 
 .about-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 
 .about-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #020c1b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-icon {
-  margin-right: 10px;
-  font-size: 2rem;
-}
-
-.header-underline {
-  height: 2px;
-  width: 100px;
-  background-color: #020c1b;
-  margin: 15px auto;
-}
-
-.about-header h2 {
-  font-size: 1.5rem;
-  color: #020c1b;
-  opacity: 0.9;
-}
-
-.about-content {
-  margin-top: 30px;
+  font-size: 3.5rem;
+  color: rgb(248, 77, 15);
+  margin-bottom: 1rem;
 }
 
 .about-intro {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #666;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-.about-intro:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
-}
-
-.about-intro p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.about-content {
+  display: grid;
+  gap: 4rem;
 }
 
 .about-section {
-  margin-bottom: 40px;
+  background-color: rgb(248, 77, 15);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+.about-section-title {
+  font-size: 2rem;
   color: #020c1b;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
-.section-icon {
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
-
-.about-section:nth-child(3) .section-icon {
-  color: #ef4444;
-}
-
-.about-section:nth-child(4) .section-icon {
-  color: #3b82f6;
-}
-
-.about-section:nth-child(5) .section-icon {
-  color: #10b981;
-}
-
-.section-content {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-section:nth-child(3) .section-content:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
-}
-
-.about-section:nth-child(4) .section-content:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
-}
-
-.about-section:nth-child(5) .section-content:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
-}
-
-.section-content p {
-  font-size: 1.05rem;
+.about-text {
   line-height: 1.6;
-  margin-bottom: 15px;
+  color: #f3f3f3;
 }
 
-.about-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
-
-.about-list li {
-  margin-bottom: 10px;
-  padding-left: 25px;
-  position: relative;
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-
-.about-list li:before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: #020c1b;
-}
-
-.project-link {
-  color: #020c1b;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  display: inline-block;
-}
-
-.project-link::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  height: 1px;
-  width: 0;
-  border-radius: 1px;
-  transition: width 0.3s ease-in-out;
-  background-color: #020c1b;
-}
-
-.project-link:hover::after {
-  width: 100%;
-}
-
-.about-section:nth-child(3) .project-link:hover {
-  color: #ef4444;
-}
-
-.about-section:nth-child(3) .project-link:hover::after {
-  background-color: #ef4444;
-}
-
-.about-section:nth-child(4) .project-link:hover {
-  color: #3b82f6;
-}
-
-.about-section:nth-child(4) .project-link:hover::after {
-  background-color: #3b82f6;
-}
-
-.about-closing {
-  margin-top: 30px;
-  border-top: 1px solid rgba(2, 12, 27, 0.1);
-  padding-top: 20px;
-}
-
-.signature {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 1.5rem;
-  margin-top: 5px;
-}
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .about-container {
+    padding: 2rem;
+  }
+
   .about-header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-  
-  .about-header h2 {
-    font-size: 1.2rem;
-  }
-  
-  .about-section h2 {
-    font-size: 1.5rem;
-  }
-  
-  .about-intro p,
-  .section-content p,
-  .about-list li {
+
+  .about-text {
     font-size: 1rem;
   }
+}
+
+/* Custom Font Sizes */
+.huge {
+  font-size: 4rem;
+}
+
+.very-huge {
+  font-size: 5rem;
 }
