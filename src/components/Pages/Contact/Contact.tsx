@@ -1,31 +1,38 @@
-import React from 'react';
+import * as React from 'react';
 import { IoIosContact } from "react-icons/io";
 import './Contact.css';
 
 const Contact: React.FC = () => {
-
   const [result, setResult] = React.useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
 
+    const form = event.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+
+    // Ensure you use a secure method to handle access keys in production
     formData.append("access_key", "019d82b3-93ff-4ff6-a949-af12fc33056b");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        form.reset();
+      } else {
+        console.error("Error", data);
+        setResult(data.message || "An error occurred while submitting the form.");
+      }
+    }  catch (error) {
+      console.error("Network Error:", error);
+      setResult("A network error occurred. Please try again later.");
     }
   };
 
