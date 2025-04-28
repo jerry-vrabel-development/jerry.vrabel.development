@@ -112,31 +112,6 @@ h3 {
   color: #f59e0b;
 }
 
-.skill-category h4 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #020c1b;
-}
-
-.skill-category ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.skill-category li {
-  margin-bottom: 8px;
-  padding-left: 15px;
-  position: relative;
-  color: #020c1b;
-}
-
-.skill-category li:before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: #020c1b;
-}
-
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));

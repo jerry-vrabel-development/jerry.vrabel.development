@@ -1,6 +1,5 @@
 import React from 'react';
 import { IoIosCodeWorking } from "react-icons/io";
-import { FaServer, FaDatabase, FaReact, FaAws } from "react-icons/fa";
 import './Portfolio.css';
 
 const Portfolio: React.FC = () => {
@@ -81,52 +80,6 @@ const Portfolio: React.FC = () => {
             record of delivering high-performance solutions across fintech, healthcare, 
             and e-commerce sectors.
           </p>
-        </section>
-
-        <section className="portfolio-skills">
-          <h3>Technical Expertise</h3>
-          <div className="skills-container">
-            <div className="skill-category">
-              <h4><FaReact className="skill-icon" /> Frontend</h4>
-              <ul>
-                <li>React/Redux/Next.js</li>
-                <li>Angular</li>
-                <li>Vue.js</li>
-                <li>JavaScript/TypeScript</li>
-                <li>HTML5/CSS3/SASS</li>
-              </ul>
-            </div>
-            <div className="skill-category">
-              <h4><FaServer className="skill-icon" /> Backend</h4>
-              <ul>
-                <li>Node.js/Express</li>
-                <li>Java/Spring Boot</li>
-                <li>Python/Django/Flask</li>
-                <li>Ruby on Rails</li>
-                <li>GraphQL/REST API Design</li>
-              </ul>
-            </div>
-            <div className="skill-category">
-              <h4><FaDatabase className="skill-icon" /> Database</h4>
-              <ul>
-                <li>MongoDB</li>
-                <li>PostgreSQL</li>
-                <li>MySQL</li>
-                <li>Redis</li>
-                <li>Elasticsearch</li>
-              </ul>
-            </div>
-            <div className="skill-category">
-              <h4><FaAws className="skill-icon" /> DevOps</h4>
-              <ul>
-                <li>AWS/Azure/GCP</li>
-                <li>Docker/Kubernetes</li>
-                <li>CI/CD Pipelines</li>
-                <li>Terraform/CloudFormation</li>
-                <li>Monitoring & Observability</li>
-              </ul>
-            </div>
-          </div>
         </section>
 
         <section className="portfolio-projects">
