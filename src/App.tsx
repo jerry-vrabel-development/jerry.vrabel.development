@@ -12,13 +12,13 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Navbar />
-            <Home />
-            <About />
-            <Services />
-            <Portfolio />
+      <Home />
+      <About />
+      <Services />
+      <Portfolio />
       <Contact />
       <Footer companyName="Jerry Vrabel Development" />
-  </div>
+    </div>
   );
 };
 
