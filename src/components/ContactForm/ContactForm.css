@@ -1,12 +1,9 @@
-/* ContactForm.css */
-
+/* ContactForm Styles */
 .contact-form {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  max-width: 500px; /* Control the maximum width */
-  margin: 0 auto; /* This centers the form with equal left/right margins */
-  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .contact-form form {
@@ -16,18 +13,31 @@
 }
 
 .contact-form label {
-  margin-top: 1rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
+  color: #fefefe;
   font-weight: 500;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  margin-bottom: 1.5rem;
   border-radius: 4px;
+  border: 1px solid #264968;
+  background-color: #041a33;
+  color: #fefefe;
   font-size: 1rem;
   width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
 }
 
 .contact-form textarea {
@@ -36,33 +46,61 @@
 }
 
 .contact-form button {
-  margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #4a6cf7;
-  color: white;
+  background-color: #f59e0b;
+  color: #020c1b;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  align-self: flex-start; /* Aligns button to the left */
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
 }
 
 .contact-form button:hover {
-  background-color: #3a56c5;
+  background-color: #e08e01;
+}
+
+.contact-form button:active {
+  transform: translateY(1px);
 }
 
 .contact-form span {
+  display: block;
   margin-top: 1rem;
+  color: #4ade80; /* Success message color */
   font-size: 0.9rem;
-  color: #4a6cf7;
 }
 
-/* Success and error states */
-.contact-form span.success {
-  color: #28a745;
+/* Error styling - if needed */
+.contact-form .error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
-.contact-form span.error {
-  color: #dc3545;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 0;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form label {
+    font-size: 0.9rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
+  }
 }

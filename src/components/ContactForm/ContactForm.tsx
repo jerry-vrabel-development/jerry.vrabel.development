@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, {useState, FormEvent} from 'react';
 import './ContactForm.css'
 
 const ContactForm: React.FC = () => {
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = useState("");
 
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
 
@@ -23,7 +23,7 @@ const ContactForm: React.FC = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form Submitted Successfully");
+        setResult("Your message has been sent! We will get back to you soon.");
         form.reset();
       } else {
         console.error("Error", data);
@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
 
         <button type="submit">Submit</button>
       </form>
-      <span>{result}</span>
+      {result && <span>{result}</span>}
     </div>
   );
 };
