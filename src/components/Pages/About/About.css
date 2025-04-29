@@ -69,21 +69,22 @@
 
 .about-section-title {
   font-size: 2.2rem;
-  color: #020c1b;;
+  background-color: #020c1b;
+  border-radius: 8px;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   font-weight: 600;
   position: relative;
-  padding-bottom: 0.8rem;
+  padding: 0.8rem;
 }
 
 .about-section-title:after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 18px;
+  left: 7px;
   width: 40px;
   height: 3px;
   background-color: rgb(248, 77, 15);
@@ -99,7 +100,7 @@
 
 .section-icon {
   font-size: 1.8rem;
-  color: #020c1b;
+  color: rgb(248, 77, 15);
 }
 
 .skill-icon {
@@ -138,7 +139,6 @@
   margin-bottom: 0.8rem;
   color: #333;
   display: list-item;
-  align-items: center;
 }
 
 .skill-list li:before {
