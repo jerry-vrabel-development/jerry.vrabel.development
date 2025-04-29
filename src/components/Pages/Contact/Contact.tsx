@@ -8,12 +8,17 @@ const Contact: React.FC = () => {
   return (
     <div className='contact-container' id="contact">
       <h1 className="contact-heading"><IoIosContact /> Contact Page</h1>
-      
+     
       <div className="contact-content">
-      <div className="contact-calendly-container">
+        <div className="contact-calendly-container">
           <InlineWidget
             url="https://calendly.com/jerry-vrabel-development/new-meeting"
-            styles={{height: '920px', width: '100%', backgroundColor: '#020c1b'}}
+            styles={{ height: '100%', width: '100%' }}
+            pageSettings={{
+              backgroundColor: '020c1b',
+              textColor: 'fefefe',
+              primaryColor: 'ffa500'
+            }}
           />
         </div>
         <div className="contact-form-container">
