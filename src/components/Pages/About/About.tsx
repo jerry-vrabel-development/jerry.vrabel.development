@@ -130,8 +130,20 @@ export default function About() {
                   initial="initial"
                   whileHover="hover"
                 >
-                  Capable of handling both client-side and server-side operations to deliver end-to-end solutions.
+                  Expertise in the delivery of client-side and server-side operations to an end-to-end solutions.
                 </motion.p>
+                <motion.ul className="skill-list">
+                  {["Integrated Solution Design","Cross-Disciplinary Problem Solving","Security Best Practices","Testing Coverage", "Micro Services"].map((skill, index) => (
+                    <motion.li 
+                      key={index}
+                      variants={listItemVariants}
+                      initial="initial"
+                      whileHover="hover"
+                    >
+                      {skill}
+                    </motion.li>
+                  ))}
+                </motion.ul>
               </div>
 
               <div className="skill-category">
@@ -184,37 +196,25 @@ export default function About() {
 
               <div className="skill-category">
                 <h3 className="skill-title"><FaRobot className="skill-icon" />AI Skills</h3>
+                <motion.p 
+                  className="skill-description"
+                  variants={listItemVariants}
+                  initial="initial"
+                  whileHover="hover"
+                >
+                  Advanced AI and Machine Learning Expertise.
+                </motion.p>
                 <motion.ul className="skill-list">
-                  <motion.li
-                    variants={listItemVariants}
-                    initial="initial"
-                    whileHover="hover"
-                  >
-                    Proficient with Ollama for local AI model deployment and inference, enabling efficient development of custom AI solutions.
-                  </motion.li>
-                  <motion.li
-                    variants={listItemVariants}
-                    initial="initial"
-                    whileHover="hover"
-                  >
-                    Experienced with Hugging Face's ecosystem for accessing, fine-tuning, and deploying state-of-the-art machine learning models.
-                  </motion.li>
-                  
-                  <motion.li
-                    variants={listItemVariants}
-                    initial="initial"
-                    whileHover="hover"
-                  >
-                    Skilled in implementing LLM applications using frameworks like LangChain and building custom RAG solutions for enterprise use cases.
-                  </motion.li>
-                  
-                  <motion.li
-                    variants={listItemVariants}
-                    initial="initial"
-                    whileHover="hover"
-                  >
-                    Proficient with PyTorch and TensorFlow for developing and training custom machine learning models for diverse applications.
-                  </motion.li>
+                  {["End-to-End AI Solution Development","Innovative Model Deployment & Inference","Ecosystem Integration and Model Customization","LLM Implementation & Application","Deep Learning Framework Proficiency"].map((skill, index) => (
+                    <motion.li 
+                      key={index}
+                      variants={listItemVariants}
+                      initial="initial"
+                      whileHover="hover"
+                    >
+                      {skill}
+                    </motion.li>
+                  ))}
                 </motion.ul>
               </div>
             </div>
