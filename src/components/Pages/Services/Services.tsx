@@ -85,8 +85,8 @@ const Services: React.FC = () => {
     <div className='services-container' id="services">
       <div className="services-wrapper">
         <div className="services-header">
-          <h1>Our Services <MdMiscellaneousServices /></h1>
-          <p>Choose the plan that works best for your needs</p>
+          <h1>My Software Services <MdMiscellaneousServices /></h1>
+          <p>Still working out the service offerings. Whether it's SASS or consulting, plans TBD so this is more of a placeholder for that... Also there is the bit of working out Stripe payment gateway within Github pages to figure out.</p>
       </div>  
         <div className="services-cards">
           {plans.map((plan) => (

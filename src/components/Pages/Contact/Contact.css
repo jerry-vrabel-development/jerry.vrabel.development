@@ -1,3 +1,4 @@
+/* Contact.css */
 .contact {
   min-height: 100vh;
   width: 100%;
@@ -9,42 +10,59 @@
   align-items: center;
 }
 
+.contact-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
 h1 {
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-form {
+.contact-heading {
+  margin-bottom: 1.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f59e0b;
+}
+
+.contact-content {
   display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  flex: 1;
+  width: 100%;
+  gap: 2rem;
 }
 
-label {
-  margin-top: 20px;
-  font-size: 18px;
+.contact-form-title h2 {
+  text-align: center;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ffa500aa;
-  border-radius: 4px;
-  margin-top: 5px;
-  font-size: 16px;
-  background-color: rgba(255, 165, 0, 0.05);
+.contact-form-container {
+  flex: 1;
+  min-width: 0; /* Ensures the flex item can shrink below its content size */
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #ffa500aa;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 30px;
-  font-size: 18px;
+.contact-calendly-container {
+  flex: 1;
+  min-width: 0; /* Ensures the flex item can shrink below its content size */
+  height: 100%; /* Make sure the container takes full height */
 }
 
-button:hover {
-  background-color: #d97a00; /* Darker shade of the primary color for hover effect */
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+  
+  .contact-container {
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  .contact-calendly-container {
+    height: 600px; /* Fixed height for mobile */
+  }
 }
