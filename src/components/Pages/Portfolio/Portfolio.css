@@ -20,17 +20,21 @@
   border-bottom: 2px solid #020c1b;
 }
 
-.header-icon {
-  font-size: 1.5rem;
+.portfolio-header-icon {
+  font-size: 2.5rem;
   margin-right: 10px;
-  vertical-align: middle;
-  color: #020c1b;
+  color: rgb(248, 77, 15);
+  margin-bottom: -4px;
 }
 
 .portfolio-header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
-  color: #020c1b;
+  color: #fefefe;
+  background-color: #020c1b;
+  border-radius: 8px;
+  padding: .25em;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-header h2 {
@@ -48,12 +52,24 @@
   margin-bottom: 50px;
 }
 
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
 h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(2, 12, 27, 0.2);
   color: #020c1b;
+}
+
+.portfolio-projects,
+.portfolio-experience, h3 {
+  color: #fefefe;
 }
 
 .skills-container {
@@ -220,10 +236,10 @@ h3 {
 }
 
 .timeline-content {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #020c1b;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -252,14 +268,16 @@ h3 {
 }
 
 .timeline-content h4 {
-  margin-bottom: 5px;
-  color: #020c1b;
+  font-size: 2.5rem;
+  color: rgb(248, 77, 15);
 }
 
 .timeline-content h5 {
-  margin-bottom: 10px;
-  color: #020c1b;
+  font-size: 1.5rem;
+  color: rgb(248, 77, 15);
   opacity: 0.8;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .timeline-period {
@@ -364,5 +382,313 @@ h3 {
   
   .portfolio-header h2 {
     font-size: 1.2rem;
+  }
+}
+
+/* Large tablets and small desktops (992px and below) */
+@media (max-width: 992px) {
+  .portfolio-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+  
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .portfolio-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 2rem;
+  }
+  
+  .timeline-content h5 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Medium tablets (768px and below) - expand existing breakpoint */
+@media (max-width: 768px) {
+  .portfolio {
+    padding-top: 30px;
+  }
+  
+  .portfolio-container {
+    max-width: 95%;
+  }
+  
+  .portfolio-header {
+    margin-bottom: 30px;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 2rem;
+  }
+  
+  .portfolio-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .portfolio-header-icon {
+    font-size: 2rem;
+  }
+  
+  .skills-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .project-card {
+    padding: 20px;
+  }
+  
+  .timeline {
+    margin-left: 10px;
+  }
+  
+  .timeline-item {
+    padding-left: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.8rem;
+  }
+  
+  .timeline-content h5 {
+    font-size: 1.2rem;
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
+  
+  .education-item {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Small tablets and large phones (576px and below) */
+@media (max-width: 576px) {
+  .portfolio {
+    padding-top: 20px;
+  }
+  
+  .portfolio-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 1.8rem;
+    padding: 0.2em;
+  }
+  
+  .portfolio-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .portfolio-header-icon {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-summary, 
+  .portfolio-skills, 
+  .portfolio-projects, 
+  .portfolio-experience, 
+  .portfolio-education, 
+  .portfolio-contact {
+    margin-bottom: 35px;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  
+  .skill-category {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .project-card {
+    padding: 15px;
+  }
+  
+  .project-card h4 {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.5rem;
+  }
+  
+  .timeline-content h5 {
+    font-size: 1.1rem;
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+  
+  .education-item h4 {
+    font-size: 1.2rem;
+  }
+  
+  .education-item h5 {
+    font-size: 1.1rem;
+  }
+  
+  .portfolio-contact {
+    padding: 15px;
+  }
+}
+
+/* Mobile phones (400px and below) */
+@media (max-width: 400px) {
+  .portfolio {
+    padding-top: 15px;
+  }
+  
+  .portfolio-container {
+    width: 95%;
+    padding: 0 10px;
+  }
+  
+  .portfolio-header {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .portfolio-header h2 {
+    font-size: 1rem;
+  }
+  
+  .portfolio-header-icon {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+  
+  .portfolio-summary, 
+  .portfolio-skills, 
+  .portfolio-projects, 
+  .portfolio-experience, 
+  .portfolio-education, 
+  .portfolio-contact {
+    margin-bottom: 25px;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+  }
+  
+  .skill-category {
+    flex: 1 1 100%;
+    padding: 12px;
+    border-radius: 6px;
+  }
+  
+  .project-card {
+    padding: 12px;
+    border-radius: 6px;
+  }
+  
+  .project-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .project-description {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+  
+  .project-tech {
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+  }
+  
+  .project-meta {
+    font-size: 0.85rem;
+  }
+  
+  .timeline {
+    margin-left: 5px;
+  }
+  
+  .timeline-item {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item:before {
+    left: -7px;
+    top: 5px;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .timeline-content {
+    padding: 12px;
+    border-radius: 6px;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.3rem;
+  }
+  
+  .timeline-content h5 {
+    font-size: 1rem;
+    margin-top: -12px;
+    margin-bottom: -12px;
+  }
+  
+  .timeline-period {
+    padding: 2px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .education-item {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+  
+  .education-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .education-item h5 {
+    font-size: 1rem;
+  }
+  
+  .education-item p {
+    font-size: 0.95rem;
+  }
+  
+  .portfolio-contact {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
   }
 }
