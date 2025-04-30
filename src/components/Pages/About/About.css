@@ -56,6 +56,17 @@
   margin-bottom: 1.5rem;
   color: #fefefe;
   background: rgb(2, 12, 27);
+  border-radius: 8px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgb(255, 255, 255);
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: rgb(255, 255, 255);
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: rgb(255, 255, 255);
+
 }
 
 .section-icon {
