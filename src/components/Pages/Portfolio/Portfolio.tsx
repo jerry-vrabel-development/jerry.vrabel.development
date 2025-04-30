@@ -1,12 +1,13 @@
 import React from 'react';
-import { IoIosCodeWorking } from "react-icons/io";
+import { SiAffinitydesigner } from "react-icons/si";
 import './Portfolio.css';
 
 const Portfolio: React.FC = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: "Enterprise CRM Platform",
+      title: "Enterprise Media Platform",
+      imageUrl: "./src/assets/images/winter-bash-jarvis.jpg",
       description: "Led development of a cloud-based CRM system serving 500+ enterprise clients with 99.9% uptime.",
       technologies: "React, Node.js, MongoDB, AWS",
       role: "Lead Architect & Full Stack Developer",
@@ -14,7 +15,8 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 2,
-      title: "FinTech Payment Processing System",
+      title: "Enterprise CMS System",
+      imageUrl: "./src/assets/images/summer-sunrise-bash.jpg",
       description: "Architected and implemented a secure payment gateway processing $50M+ in transactions monthly.",
       technologies: "Java, Spring Boot, PostgreSQL, Kubernetes",
       role: "Technical Lead",
@@ -22,7 +24,8 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 3,
-      title: "Healthcare Data Management Platform",
+      title: "Healthcare Data Management",
+      imageUrl: "./src/assets/images/beach-smile-bash.jpg",
       description: "Built HIPAA-compliant platform for managing patient data across 12 major hospital networks.",
       technologies: "Python, Django, React, Azure, Redis",
       role: "Senior Full Stack Engineer",
@@ -35,13 +38,13 @@ const Portfolio: React.FC = () => {
       company: "Forwardslash Development",
       position: "Principal Software Architect",
       period: "2008-Present",
-      description: "Leading architecture decisions and development for enterprise SaaS products with microservices architecture."
+      description: "Leading architecture decisions and development for enterprise SaaS products with microservices architecture.As an experienced web application engineer, I delivered agile-driven projects from small websites to complex content management systems, leading cross-functional teams to enhance development speed by 25%, mentored developers to boost productivity, collaborated with clients for clear project goals, and implemented robust automated testing strategies."
     },
-    {
+      {
       company: "Agile 6",
-      position: "Lead Full Stack Developer",
+      position: "Senior Full Stack Engineer",
       period: "2024",
-      description: "VA.gov"
+      description: "Engineered the modern headless foundation for VA.gov, reducing content publishing times for thousands of editors from hours to under five minutes.Assisted with benefits claims processing improvements across the VA stack as part of the PACT Act. Including but not limited to: accessibility updates to custom React form inputs, improving OCR processing of PDF claim data in Python, and adding new features in React and Ruby for Accredited Representatives helping Veterans with the claims process. Rapid prototyping of technical solutions leading to major contract vehicle wins, receiving highest technical marks from government evaluators."
     },
     {
       company: "VMLY&R",
@@ -67,20 +70,9 @@ const Portfolio: React.FC = () => {
     <div className="portfolio" id="portfolio">
       <div className="portfolio-container">
         <header className="portfolio-header">
-          <h1><IoIosCodeWorking className="header-icon" /> Portfolio</h1>
+          <h1><SiAffinitydesigner className="portfolio-header-icon" /> Portfolio</h1>
           <h2>Building robust, scalable applications for over two decades</h2>
         </header>
-
-        <section className="portfolio-summary">
-          <h3>Professional Summary</h3>
-          <p>
-            Seasoned full stack developer with 20+ years of experience architecting 
-            and implementing enterprise-grade applications. Specialist in distributed 
-            systems, microservices architecture, and cloud infrastructure. Proven track 
-            record of delivering high-performance solutions across fintech, healthcare, 
-            and e-commerce sectors.
-          </p>
-        </section>
 
         <section className="portfolio-projects">
           <h3>Featured Projects</h3>
@@ -88,6 +80,10 @@ const Portfolio: React.FC = () => {
             {featuredProjects.map(project => (
               <div className="project-card" key={project.id}>
                 <h4>{project.title}</h4>
+                <img src={project.imageUrl || "/api/placeholder/400/200"}
+                  alt={`${project.title} thumbnail`}
+                  className="project-image"
+                />
                 <p className="project-description">{project.description}</p>
                 <p className="project-tech"><strong>Technologies:</strong> {project.technologies}</p>
                 <div className="project-meta">
