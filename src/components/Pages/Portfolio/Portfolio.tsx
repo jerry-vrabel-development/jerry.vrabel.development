@@ -6,30 +6,30 @@ const Portfolio: React.FC = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: "Enterprise Media Platform",
+      title: "Agency Brand Development",
       imageUrl: "./images/winter-bash-jarvis.jpg",
-      description: "Led development of a cloud-based CRM system serving 500+ enterprise clients with 99.9% uptime.",
-      technologies: "React, Node.js, MongoDB, AWS",
-      role: "Lead Architect & Full Stack Developer",
+      description: "Vetrinarian Recommendation Application. A React-based, full stack selection app for recommending the correct dog food for Science Diet brand products.",
+      technologies: "React, Typescript, Drupal, Storybook",
+      role: "Senior Front-End Engineer",
       year: "2020-Present"
     },
     {
       id: 2,
       title: "Enterprise CMS System",
       imageUrl: "./images/summer-sunrise-bash.jpg",
-      description: "Architected and implemented a secure payment gateway processing $50M+ in transactions monthly.",
-      technologies: "Java, Spring Boot, PostgreSQL, Kubernetes",
-      role: "Technical Lead",
-      year: "2018-2020"
+      description: "Veteran-facing web applications built through the integration of a Headless CMS, ensuring accessibility and seamless user experiences with cutting-edge technologies while upholding rigorous security standards.",
+      technologies: "Next.js, Drupal, PostgreSQL, Docker",
+      role: "Senior Full Stack Engineer",
+      year: "2024"
     },
     {
       id: 3,
-      title: "Healthcare Data Management",
+      title: "Global Healthcare Expo",
       imageUrl: "./images/beach-smile-bash.jpg",
-      description: "Built HIPAA-compliant platform for managing patient data across 12 major hospital networks.",
-      technologies: "Python, Django, React, Azure, Redis",
-      role: "Senior Full Stack Engineer",
-      year: "2015-2018"
+      description: "HIMSS Global Expo mobile application and integrated web platform ensuring enhanced user engagement and efficient event management",
+      technologies: "Expo, Drupal, React, AWS, Redis",
+      role: "Lead Digital Platform Engineer",
+      year: "2018-2020"
     }
   ];
 
@@ -48,21 +48,21 @@ const Portfolio: React.FC = () => {
     },
     {
       company: "VMLY&R",
-      position: "Senior Software Engineer",
+      position: "Senior Front-End Engineer",
       period: "2022-2023",
-      description: "Agency development for global brands"
+      description: "Agency development for global brands. As a Senior Front-End Engineer for VMLY&R, I led React-based development for Science Diet, UPack, and United Rentals, delivering seamless user experiences and enhancing brand engagement through innovative solutions."
     },
     {
       company: "Healthcare Information and Management Systems Society",
-      position: "Lead Engineer",
+      position: "Lead Digital Platform Engineer",
       period: "2018-2022",
-      description: "Built custom web applications and platforms for healthcare"
+      description: "Built custom web applications and platforms for the healthcare industry"
     },
     {
-      company: "Digital Innovations Ltd.",
-      position: "Software Developer",
+      company: "Farm Journal Media",
+      position: "Senior Developer",
       period: "2003-2005",
-      description: "Worked on early web applications and content management systems."
+      description: "Enterprise Media Platform specialized in agriculture markets. Worked on early web applications and content management systems."
     }
   ];
 
