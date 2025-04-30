@@ -7,7 +7,7 @@ const Portfolio: React.FC = () => {
     {
       id: 1,
       title: "Enterprise Media Platform",
-      imageUrl: "./src/assets/images/winter-bash-jarvis.jpg",
+      imageUrl: "./images/winter-bash-jarvis.jpg",
       description: "Led development of a cloud-based CRM system serving 500+ enterprise clients with 99.9% uptime.",
       technologies: "React, Node.js, MongoDB, AWS",
       role: "Lead Architect & Full Stack Developer",
@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
     {
       id: 2,
       title: "Enterprise CMS System",
-      imageUrl: "./src/assets/images/summer-sunrise-bash.jpg",
+      imageUrl: "./images/summer-sunrise-bash.jpg",
       description: "Architected and implemented a secure payment gateway processing $50M+ in transactions monthly.",
       technologies: "Java, Spring Boot, PostgreSQL, Kubernetes",
       role: "Technical Lead",
@@ -25,7 +25,7 @@ const Portfolio: React.FC = () => {
     {
       id: 3,
       title: "Healthcare Data Management",
-      imageUrl: "./src/assets/images/beach-smile-bash.jpg",
+      imageUrl: "./images/beach-smile-bash.jpg",
       description: "Built HIPAA-compliant platform for managing patient data across 12 major hospital networks.",
       technologies: "Python, Django, React, Azure, Redis",
       role: "Senior Full Stack Engineer",
