@@ -72,9 +72,6 @@ export default function About() {
             className="about-section" 
             data-section
             variants={sectionVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
           >
             <h2 className="about-section-title">
               <FaLaptopCode className="section-icon" /> Skills
