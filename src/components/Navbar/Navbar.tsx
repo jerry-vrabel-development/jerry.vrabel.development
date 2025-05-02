@@ -8,6 +8,11 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    // Function to close the mobile menu
+    const closeMobileMenu = () => {
+      setMobileMenuOpen(false);
+    };
   
   return (
     <div className="App">
@@ -61,30 +66,30 @@ const Navbar = () => {
         <div className={`mobile-menu-container ${mobileMenuOpen ? 'active' : ''}`}>
           <ul className="mobile-navbar-ul">
             <li className="mobile-nav-item">
-              <a href="#home" className="nav-link">
+              <a href="#home" className="nav-link" onClick={closeMobileMenu}>
                 <span>Home</span>
                 <div className="link-underline"></div>
               </a>
             </li>
             <li className="mobile-nav-item">
-              <a href="#about" className="nav-link">
+              <a href="#about" className="nav-link" onClick={closeMobileMenu} >
                 <span>About</span>
                 <div className="link-underline"></div>
               </a>
             </li>
-            <li className="mobile-nav-item">
+            <li className="mobile-nav-item" onClick={closeMobileMenu}>
               <a href="#services" className="nav-link">
                 <span>Services</span>
                 <div className="link-underline"></div>
               </a>
             </li>
-            <li className="mobile-nav-item">
+            <li className="mobile-nav-item" onClick={closeMobileMenu}>
               <a href="#portfolio" className="nav-link">
                 <span>Portfolio</span>
                 <div className="link-underline"></div>
               </a>
             </li>
-            <li className="mobile-nav-item">
+            <li className="mobile-nav-item" onClick={closeMobileMenu}>
               <a href="#contact" className="nav-link">
                 <span>Contact</span>
                 <div className="link-underline"></div>
