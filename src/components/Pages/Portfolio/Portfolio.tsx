@@ -107,7 +107,6 @@ const Portfolio: React.FC = () => {
               <div className="timeline-item" key={index}>
                 <div className="timeline-content">
                   <h4>
-                    {job.icon && <job.icon className="job-icon" />}
                     {job.position}</h4>
                   <h5>{job.company}</h5>
                   <p className="timeline-period">{job.period}</p>
