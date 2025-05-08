@@ -1,29 +1,64 @@
 // Logo.tsx
 import React, { useState, useEffect } from 'react';
-import "./Logo.css"
+import './Logo.css';
 
-const bashLogoUrl = '/jerry.vrabel.development/250-bash.svg'
+interface LogoProps {
+  animationStyle?: 'fadeIn' | 'pulse' | 'bounce' | 'rotate' | 'zoom';
+  size?: 'small' | 'medium' | 'large';
+  color?: string;
+}
 
-const Logo: React.FC = () => {
-  const [isFadingIn, setIsFadingIn] = useState(true);
+const LOGO_PATH = '/jerry.vrabel.development/250-bash.svg';
+const ANIMATION_DURATION = 1000; // ms
+
+/**
+ * Logo component with configurable size, animation and color effects
+ */
+const Logo: React.FC<LogoProps> = ({
+  animationStyle = 'fadeIn',
+  size = 'medium',
+  color = '#f84d0f'
+}) => {
+  const [isAnimating, setIsAnimating] = useState(true);
   const [isColorChanging, setIsColorChanging] = useState(false);
 
+  // Handle animation state changes
   useEffect(() => {
-    if (isFadingIn) {
-      const timeoutId = setTimeout(() => {
-        setIsFadingIn(false);
-        setIsColorChanging(true);
-      }, 500); // Adjust the duration of the fade-in animation here
+    if (!isAnimating) return;
+    
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+      setIsColorChanging(true);
+    }, ANIMATION_DURATION);
+    
+    return () => clearTimeout(timer);
+  }, [isAnimating]);
 
-      return () => clearTimeout(timeoutId);
-    }
-  }, [isFadingIn]);
+  // Create container class names
+  const containerClasses = [
+    'logo-container',
+    size,
+    isAnimating ? animationStyle : '',
+    isColorChanging ? 'color-change' : ''
+  ].filter(Boolean).join(' ');
+
+  // Set custom CSS variables
+  const containerStyle = {
+    '--highlight-color': color
+  } as React.CSSProperties;
 
   return (
-    <div className={`logo-container ${isColorChanging ? 'color-change' : ''}`}>
+    <div 
+      className={containerClasses}
+      style={containerStyle}
+      onClick={() => setIsAnimating(true)}
+      role="button"
+      aria-label="Replay logo animation"
+    >
       <img
-        src={bashLogoUrl}
+        src={LOGO_PATH}
         alt="Bash Logo"
+        className="logo-image"
       />
     </div>
   );
