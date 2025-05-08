@@ -18,7 +18,11 @@ const Home: React.FC = () => {
       <div className="logo-wrapper">
         <div ref={logoGlowRef} className="logo-glow"></div>
         <div ref={logoRef} className="logo-container">
-          <Logo />
+          <Logo
+            animationStyle="bounce"
+            size="large" 
+            color="#61dafb"
+          />
         </div>
       </div>
     </div>
