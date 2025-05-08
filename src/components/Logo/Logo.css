@@ -1,24 +1,107 @@
-.logo {
-  animation: fadeIn 0.5s ease-in-out forwards; /* Adjust the duration here */
-  transition: backdrop-filter 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Logo.css - Base styles */
 .logo-container {
-  animation: fadeIn 0.5s ease-in-out forwards; /* Adjust the duration here */
-  transition: backdrop-filter 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
-.color-change {
-  filter: drop-shadow(0 0 2em #f84d0f); /* Apply drop shadow with specified color */
+/* Size variations */
+.logo-container.small .logo-image {
+  width: 100px;
+  height: auto;
+}
+
+.logo-container.medium .logo-image {
+  width: 200px;
+  height: auto;
+}
+
+.logo-container.large .logo-image {
+  width: 600px;
+  height: auto;
+}
+
+/* Animation classes */
+.logo-container.fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.logo-container.pulse {
+  animation: pulse 2s infinite;
+}
+
+.logo-container.bounce {
+  animation: bounce 1s ease-in-out forwards;
+}
+
+.logo-container.rotate {
+  animation: rotate 1s ease-in-out forwards;
+}
+
+.logo-container.zoom {
+  animation: zoom 1s ease-in-out forwards;
+}
+
+/* Color change effect */
+.logo-container.color-change {
+  filter: drop-shadow(0 0 2em var(--highlight-color, #f84d0f));
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 var(--highlight-color, #f84d0f));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 1.5em var(--highlight-color, #f84d0f));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 var(--highlight-color, #f84d0f));
+  }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes zoom {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .logo-container.small .logo-image { width: 75px; }
+  .logo-container.medium .logo-image { width: 150px; }
+  .logo-container.large .logo-image { width: 200px; }
+}
+
+@media (max-width: 480px) {
+  .logo-container.small .logo-image { width: 50px; }
+  .logo-container.medium .logo-image { width: 100px; }
+  .logo-container.large .logo-image { width: 150px; }
+}
+
+@media (min-width: 1200px) {
+  .logo-container.large .logo-image {
+    width: 700px;
+    height: auto;
+  }
 }
