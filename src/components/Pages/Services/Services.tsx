@@ -4,6 +4,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { GiCutDiamond } from "react-icons/gi";
 import { IoRocketOutline } from "react-icons/io5";
 import { FiBox } from "react-icons/fi";
+import { FaStore, FaShoppingCart, FaDesktop } from "react-icons/fa";
 import './Services.css';
 
 const Services: React.FC = () => {
@@ -15,68 +16,75 @@ const Services: React.FC = () => {
 
   const plans = [
     {
-      id: 'basic',
-      name: 'Basic',
-      price: 49,
-      period: 'month',
-      icon: <FiBox className="service-icon" />,
+      id: 'starter',
+      name: 'Local Starter',
+      price: 799,
+      period: 'one-time',
+      icon: <FaStore className="service-icon" />,
       color: 'blue',
       features: [
-        { name: 'Up to 5 projects', included: true },
-        { name: '20 GB storage', included: true },
-        { name: 'Basic support', included: true },
-        { name: 'Monthly reports', included: false },
-        { name: 'Custom domain', included: false },
-        { name: 'Premium plugins', included: false },
+        { name: 'Custom Web Application', included: true },
+        { name: 'Mobile optimization', included: true },
+        { name: 'Github Code repositorty', included: true },
+        { name: 'New Business start-up', included: true },
+        { name: 'SEO', included: true },
+        { name: 'Contact form', included: true },
+        { name: 'E-commerce features', included: false },
+        { name: 'Booking system', included: false },
       ],
     },
     {
-      id: 'pro',
-      name: 'Professional',
-      price: 99,
+      id: 'business',
+      name: 'RP Business',
+      price: 149,
       period: 'month',
       icon: <FaRegCircleCheck className="service-icon" />,
       color: 'green',
       popular: true,
       features: [
-        { name: 'Up to 15 projects', included: true },
-        { name: '50 GB storage', included: true },
-        { name: 'Priority support', included: true },
+        { name: 'Everything in Starter', included: true },
+        { name: 'Booking integration', included: true },
+        { name: 'Multilingual options', included: true },
+        { name: 'Monthly content updates', included: true },
+        { name: 'SEO Updates', included: true },
         { name: 'Monthly reports', included: true },
-        { name: 'Custom domain', included: true },
-        { name: 'Premium plugins', included: false },
+        { name: 'Maintenance', included: true },
+        { name: 'E-commerce', included: false },
       ],
     },
     {
-      id: 'business',
-      name: 'Business',
-      price: 199,
+      id: 'premium',
+      name: '60626 Premium',
+      price: 299,
       period: 'month',
       icon: <IoRocketOutline className="service-icon" />,
       color: 'purple',
       features: [
-        { name: 'Up to 50 projects', included: true },
-        { name: '100 GB storage', included: true },
-        { name: 'Premium support', included: true },
+        { name: 'Everything in Business', included: true },
+        { name: 'E-commerce functionality', included: true },
+        { name: 'Database backups', included: true },
+        { name: 'Local delivery integration', included: true },
+        { name: 'Weekly content updates', included: true },
         { name: 'Weekly reports', included: true },
-        { name: 'Custom domain', included: true },
-        { name: 'Premium plugins', included: true },
       ],
     },
     {
-      id: 'enterprise',
-      name: 'Enterprise',
-      price: 499,
-      period: 'month',
+      id: 'custom',
+      name: 'Custom',
+      price: null,
+      customPrice: 'Special',
+      period: '',
       icon: <GiCutDiamond className="service-icon" />,
       color: 'gold',
       features: [
-        { name: 'Unlimited projects', included: true },
-        { name: 'Unlimited storage', included: true },
-        { name: '24/7 dedicated support', included: true },
-        { name: 'Daily reports', included: true },
-        { name: 'Multiple custom domains', included: true },
-        { name: 'All premium plugins', included: true },
+        { name: 'Custom web application', included: true },
+        { name: 'AI integration capabilities', included: true },
+        { name: 'Process automation', included: true },
+        { name: 'Custom CRM development', included: true },
+        { name: 'Staff training & support', included: true },
+        { name: 'Project manager', included: true },
+        { name: 'Unlimited revisions', included: true },
+        { name: '24/7 priority support', included: true },
       ],
     },
   ];
@@ -85,8 +93,8 @@ const Services: React.FC = () => {
     <div className='services-container' id="services">
       <div className="services-wrapper">
         <div className="services-header">
-          <h1>My Software Services <MdMiscellaneousServices /></h1>
-          <p>Still working out the service offerings. Whether it's SASS or consulting, plans TBD so this is more of a placeholder for that... Also there is the bit of working out Stripe payment gateway within Github pages to figure out.</p>
+          <h1>Web Solutions for Rogers Park Businesses <FaDesktop /></h1>
+          <p>Tailored web development services designed specifically for businesses in the 60626 neighborhood. From basic websites to full custom applications, I offer affordable solutions to help your Rogers Park business thrive online.</p>
       </div>  
         <div className="services-cards">
           {plans.map((plan) => (
@@ -100,9 +108,15 @@ const Services: React.FC = () => {
                 <h2>{plan.name}</h2>
               </div>
               <div className="service-price">
-                <span className="currency">$</span>
-                <span className="amount">{plan.price}</span>
-                <span className="period">/{plan.period}</span>
+                {plan.price ? (
+                  <>
+                    <span className="currency">$</span>
+                    <span className="amount">{plan.price}</span>
+                    <span className="period">/{plan.period}</span>
+                  </>
+                ) : (
+                  <span className="custom-price">{plan.customPrice}</span>
+                )}
               </div>
               <ul className="service-features">
                 {plan.features.map((feature, index) => (
@@ -119,10 +133,13 @@ const Services: React.FC = () => {
                 className="service-button"
                 onClick={() => handleSelectPlan(plan.id)}
               >
-                {selectedPlan === plan.id ? 'Selected' : 'Select Plan'}
+                {selectedPlan === plan.id ? 'Selected' : plan.price ? 'Select Plan' : 'Request Quote'}
               </button>
             </div>
           ))}
+        </div>
+        <div className="services-note">
+          <p>All plans include a free initial consultation and are designed specifically for Rogers Park businesses. Coffee chat consultations available at local cafés throughout the 60626 area.</p>
         </div>
       </div>
     </div>

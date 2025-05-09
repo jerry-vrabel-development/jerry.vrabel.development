@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FaUserAlt, FaLaptopCode, FaQuestionCircle, FaReact, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
 import { ImStack } from "react-icons/im";
 import { TbApi } from "react-icons/tb";
+import { FaStore, FaSearchLocation, FaShoppingCart, FaCalendarAlt, FaTools, FaHandshake } from 'react-icons/fa';
 import './About.css';
 
 export default function About() {
@@ -45,12 +46,12 @@ export default function About() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Software Developer & Problem Solver
+            Rogers Park's Premier Web Developer
           </motion.p>
         </motion.header>
 
         <div className="about-content">
-          {/* Experience Section */}
+          {/* Local Focus Section */}
           <motion.section 
             className="about-section" 
             data-section
@@ -60,29 +61,32 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <h2 className="about-section-title">
-              <FaUserAlt className="section-icon" /> Experience
+              <FaSearchLocation className="section-icon" /> Rogers Park (60626) Focused
             </h2>
             <p className="about-text">
-              With over 16 years of software engineering experience, I specialize in crafting robust and scalable applications. My skill set encompasses both front-end and back-end technologies, bolstered by a strong foundation in UX consulting. I am known for leading high-performing technical teams and driving innovation through the adoption of cutting-edge technologies. As a passionate frontend developer with agency experience, I excel at creating aesthetically pleasing and functional web solutions. My expertise includes React, Node.js, TypeScript, and cloud infrastructure.
+              As a Rogers Park resident and developer, I understand the unique needs of our diverse community. I specialize in creating digital solutions for local businesses that increase visibility, streamline operations, and grow your customer base right here in our neighborhood. From Devon Avenue to Howard Street, I help businesses like yours stand out in our vibrant community with custom web applications tailored to the 60626 area.
             </p>
           </motion.section>
 
-          {/* Skills Section */}
+          {/* Services Section */}
           <motion.section 
             className="about-section" 
             data-section
             variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
             <h2 className="about-section-title">
-              <FaLaptopCode className="section-icon" /> Skills
+              <FaLaptopCode className="section-icon" /> Services for Local Businesses
             </h2>
             
             <div className="skills-grid">
               <div className="skill-category">
-                <h3 className="skill-title"><FaReact className="skill-icon" />Frontend Development</h3>
-                <p className="skill-description">Expertise in UX design and accessibility standards.</p>
+                <h3 className="skill-title"><FaStore className="skill-icon" />Custom Website Development</h3>
+                <p className="skill-description">Modern, responsive websites designed specifically for Rogers Park businesses.</p>
                 <motion.ul className="skill-list">
-                  {["TypeScript","React","Redux","Next.js","Angular","HTML5/CSS3/SASS"].map((skill, index) => (
+                  {["Mobile-Friendly Design","Multilingual Options","Local SEO Optimization","Neighborhood-Focused Content","Integration with Google Maps"].map((skill, index) => (
                     <motion.li 
                       key={index}
                       variants={listItemVariants}
@@ -96,17 +100,17 @@ export default function About() {
               </div>
 
               <div className="skill-category">
-                <h3 className="skill-title"><TbApi className="skill-icon" />Backend Technologies</h3>
+                <h3 className="skill-title"><FaShoppingCart className="skill-icon" />E-commerce Solutions</h3>
                 <motion.p 
                   className="skill-description"
                   variants={listItemVariants}
                   initial="initial"
                   whileHover="hover"
                 >
-                  Skilled in Node.js for server-side development; adept at designing scalable APIs.
+                  Help your Rogers Park business sell online to both local customers and beyond.
                 </motion.p>
                 <motion.ul className="skill-list">
-                  {["Node.js/Express","GraphQL/REST API Design","Java/Spring Boot","Python/Django/Flask","Ruby on Rails"].map((skill, index) => (
+                  {["Online Store Setup","Local Delivery Integration","Secure Payment Processing","Inventory Management","Customer Loyalty Programs"].map((skill, index) => (
                     <motion.li 
                       key={index}
                       variants={listItemVariants}
@@ -120,17 +124,17 @@ export default function About() {
               </div>
 
               <div className="skill-category">
-                <h3 className="skill-title"><ImStack className="skill-icon" />Full-Stack Development</h3>
+                <h3 className="skill-title"><FaCalendarAlt className="skill-icon" />Booking & Reservation</h3>
                 <motion.p 
                   className="skill-description"
                   variants={listItemVariants}
                   initial="initial"
                   whileHover="hover"
                 >
-                  Expertise in the delivery of client-side and server-side operations to an end-to-end solutions.
+                  Perfect for Rogers Park restaurants, salons, fitness studios, and service providers.
                 </motion.p>
                 <motion.ul className="skill-list">
-                  {["Integrated Solution Design","Cross-Disciplinary Problem Solving","Security Best Practices","Testing Coverage", "Micro Services"].map((skill, index) => (
+                  {["24/7 Online Booking","Automated Reminders","Staff Scheduling","Custom Intake Forms","Calendar Integration"].map((skill, index) => (
                     <motion.li 
                       key={index}
                       variants={listItemVariants}
@@ -144,17 +148,17 @@ export default function About() {
               </div>
 
               <div className="skill-category">
-                <h3 className="skill-title"><FaCloud className="skill-icon" />DevOps</h3>
+                <h3 className="skill-title"><FaTools className="skill-icon" />Business Automation</h3>
                 <motion.p 
                   className="skill-description"
                   variants={listItemVariants}
                   initial="initial"
                   whileHover="hover"
                 >
-                  Experienced with cloud platforms, including AWS and Azure, for deploying scalable applications.
+                  Save time and reduce costs with custom automation solutions.
                 </motion.p>
                 <motion.ul className="skill-list">
-                  {["AWS/Azure/GCP","Docker/Kubernetes","CI/CD Pipelines","Terraform/CloudFormation","Monitoring & Observability"].map((skill, index) => (
+                  {["Customer Communication","Invoice Generation","Appointment Scheduling","Email Marketing","Social Media Integration"].map((skill, index) => (
                     <motion.li 
                       key={index}
                       variants={listItemVariants}
@@ -168,17 +172,17 @@ export default function About() {
               </div>
 
               <div className="skill-category">
-                <h3 className="skill-title"><FaDatabase className="skill-icon" />Database Management</h3>
+                <h3 className="skill-title"><FaCloud className="skill-icon" />Web Application Development</h3>
                 <motion.p 
                   className="skill-description"
                   variants={listItemVariants}
                   initial="initial"
                   whileHover="hover"
                 >
-                  Proficient in SQL and NoSQL databases like PostgreSQL and MongoDB.
+                  Custom solutions for unique business challenges in Rogers Park.
                 </motion.p>
                 <motion.ul className="skill-list">
-                  {["PostgreSQL","Redis","MongoDB","Elasticsearch","MySQL"].map((skill, index) => (
+                  {["Customer Portals","Business Management Tools","Content Management Systems","Mobile Apps","Community Platforms"].map((skill, index) => (
                     <motion.li 
                       key={index}
                       variants={listItemVariants}
@@ -192,17 +196,17 @@ export default function About() {
               </div>
 
               <div className="skill-category">
-                <h3 className="skill-title"><FaRobot className="skill-icon" />AI Skills</h3>
+                <h3 className="skill-title"><FaRobot className="skill-icon" />AI Integration</h3>
                 <motion.p 
                   className="skill-description"
                   variants={listItemVariants}
                   initial="initial"
                   whileHover="hover"
                 >
-                  Advanced AI and Machine Learning Expertise.
+                  Bringing cutting-edge AI solutions to Rogers Park small businesses.
                 </motion.p>
                 <motion.ul className="skill-list">
-                  {["End-to-End AI Solution Development","Innovative Model Deployment & Inference","Ecosystem Integration and Model Customization","LLM Implementation & Application","Deep Learning Framework Proficiency"].map((skill, index) => (
+                  {["Customer Service Chatbots","Business Intelligence","Content Generation","Personalized Recommendations","Process Automation"].map((skill, index) => (
                     <motion.li 
                       key={index}
                       variants={listItemVariants}
@@ -227,10 +231,10 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <h2 className="about-section-title">
-              <FaQuestionCircle className="section-icon" /> About
+              <FaHandshake className="section-icon" /> Why Choose a Local Developer
             </h2>
             <p className="about-text">
-              I focus on creating user-friendly interfaces while maintaining robust, secure, and efficient code.
+              With over 16 years of software engineering experience and deep roots in Rogers Park, I offer something national agencies can't - personalized service with local knowledge. I understand our community's unique character and customer base. When you work with me, you're supporting the local economy while getting top-tier web development tailored specifically to succeed in our neighborhood.
             </p>
             <div className="about-closing">
               <motion.p
@@ -238,7 +242,7 @@ export default function About() {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                Let's work together to bring your vision to life.
+                Let's meet for coffee at one of our great local cafés to discuss how I can help your Rogers Park business thrive online.
               </motion.p>
               <motion.h3 
                 className="signature"
