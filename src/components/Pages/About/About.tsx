@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaUserAlt, FaLaptopCode, FaQuestionCircle, FaReact, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
-import { ImStack } from "react-icons/im";
-import { TbApi } from "react-icons/tb";
+import { FaLaptopCode, FaCloud, FaRobot } from 'react-icons/fa';
 import { FaStore, FaSearchLocation, FaShoppingCart, FaCalendarAlt, FaTools, FaHandshake } from 'react-icons/fa';
 import './About.css';
 
