@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { MdMiscellaneousServices, MdDone, MdOutlineClose } from "react-icons/md";
+import { MdDone, MdOutlineClose } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { GiCutDiamond } from "react-icons/gi";
 import { IoRocketOutline } from "react-icons/io5";
-import { FiBox } from "react-icons/fi";
-import { FaStore, FaShoppingCart, FaDesktop } from "react-icons/fa";
+import { FaStore, FaDesktop } from "react-icons/fa";
 import './Services.css';
 
 const Services: React.FC = () => {
